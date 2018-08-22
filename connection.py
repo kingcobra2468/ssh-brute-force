@@ -28,7 +28,3 @@ class connection:
             
         except:
             print("Failed")
-            
-
-x=connection('10.0.1.32', 'leo', 'accss');
-x.attemptConnection()
