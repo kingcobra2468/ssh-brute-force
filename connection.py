@@ -1,5 +1,7 @@
 import threading
 import paramiko
+import time
+
 
 class connection:
     __passfound = False
@@ -23,8 +25,8 @@ class connection:
                 username = self.username, 
                 password = self.password, 
                 timeout = 0.2, 
-                banner_timeout = 0, 
-                auth_timeout = 0)
-            
+                banner_timeout = 10, 
+                auth_timeout = 0.25)
+            self.__passfound = True
         except:
             print("Failed")
